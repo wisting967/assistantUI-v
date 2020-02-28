@@ -1,4 +1,6 @@
 /**index.wxss**/
+@import '../../component/weuiwxss/dist/style/weui.wxss';
+
 .userinfo {
   display: flex;
   flex-direction: column;
@@ -18,4 +20,38 @@
 
 .usermotto {
   margin-top: 200px;
+}
+
+.page__title {
+  text-align: left;
+  font-size: 20px;
+  font-weight: 400;
+  padding: 20px;
+}
+
+.page__desc {
+  margin-top: 5px;
+  color: #888888;
+  text-align: left;
+  font-size: 14px;
+  padding: 20px;
+}
+
+.text__footer {
+  position: fixed;
+  text-align: center;
+  bottom: 40rpx;
+  left: 0;
+  right: 0;
+  font-size: 14px;
+}
+
+.text__copyright {
+  position: fixed;
+  text-align: center;
+  bottom: 15rpx;
+  left: 0;
+  right: 0;
+  color: #888888;
+  font-size: 11px;
 }

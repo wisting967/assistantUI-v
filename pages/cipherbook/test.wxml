@@ -1,0 +1,32 @@
+<!--pages/cipherbook/test.wxml-->
+<van-row>
+  <van-col span="2">11</van-col>
+  <van-col span="10">
+    <van-button type="default" bind:click="onDialog" block>默认按钮</van-button>
+  </van-col>
+  <van-col span="10">
+    <van-button type="default" bind:click="onDialogCancel" block>Canel按钮</van-button>
+  </van-col>
+  <van-col span="2">11</van-col>
+</van-row>
+ 
+<van-dialog id="van-dialog" />
+<view class="container">
+  <view class="weui-demo-dialog {{istrue ? 'weui-demo-dialog_show' : ''}}">
+    <view class="weui-mask" bindtap="closeDialog"></view>
+    <view class="weui-dialog__wrp" bindtap="closeDialog">
+        <view class="weui-dialog" catchtap="stopEvent">
+          <view class="weui-dialog__hd">
+            <view class="weui-dialog__title">标题</view>
+          </view>
+          <view class="weui-dialog__bd">
+            <image class="weui-article__img" src="../images/pic_article.png" mode="aspectFill" style="max-width:100%;"/>
+          </view>
+          <view class="weui-dialog__ft">
+              <view class="weui-dialog__btn weui-dialog__btn_default" bindtap="closeDialog">取消</view>
+              <view class="weui-dialog__btn" bindtap="closeDialog">确定</view>
+          </view>
+        </view>
+    </view>
+  </view>
+</view>

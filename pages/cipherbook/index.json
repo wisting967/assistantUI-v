@@ -1,5 +1,6 @@
 {
   "usingComponents": {
+    "van-button": "../../component/@vant/weapp/dist/button/index",
     "van-search": "../../component/@vant/weapp/dist//search/index",
     "van-grid": "../../component/@vant/weapp/dist/grid/index",
     "van-grid-item": "../../component/@vant/weapp/dist/grid-item/index"

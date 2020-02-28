@@ -10,6 +10,18 @@ App({
     wx.login({
       success: res => {
         // 发送 res.code 到后台换取 openId, sessionKey, unionId
+        wx.setStorage({
+          key: 'code',
+          data: res.code,
+        });
+        
+        wx.request({
+          url: getApp().globalData.srvAddr + '/api/v1/user/login/?data=' + res.code,
+          success(res) {
+            console.log(res.data);
+            console.log(res.data.code);
+          }
+        })
       }
     })
     // 获取用户信息
@@ -34,6 +46,7 @@ App({
     })
   },
   globalData: {
-    userInfo: null
+    userInfo: null,
+    'srvAddr': 'http://117.89.175.86:8088'
   }
 })

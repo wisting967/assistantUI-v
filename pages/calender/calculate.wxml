@@ -1,0 +1,18 @@
+<!--pages/calender/calculate.wxml-->
+<!--text>pages/calender/calculate.wxml</text-->
+<van-cell-group>
+  <van-cell title="开始第一天" is-link bind:click="showPopup" value="{{ currentDate_Date }}"/>
+</van-cell-group>
+
+<van-dialog id="van-dialog" />
+
+<van-popup show="{{ show }}" bind:close="onClose" position="top">
+  <van-datetime-picker
+    type="date"
+    value="{{ currentDate_ms }}"
+    bind:confirm="onConfirm"
+    bind:cancel="onClose"
+    min-date="{{ minDate }}"
+    formatter="{{ formatter }}"
+  />
+</van-popup>

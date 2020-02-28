@@ -1,0 +1,7 @@
+{
+  "usingComponents": {
+    "van-picker": "../../component/@vant/weapp/dist/picker/index",
+    "van-collapse": "../../component/@vant/weapp/dist/collapse/index",
+    "van-collapse-item": "../../component/@vant/weapp/dist/collapse-item/index"
+  }
+}

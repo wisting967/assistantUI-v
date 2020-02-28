@@ -1,0 +1,19 @@
+<!--pages/accountbook/index.wxml-->
+<van-row>
+  <van-cell-group>
+    <van-cell title="{{ feeName }}" is-link />
+    <van-cell title="当前余额" value="{{ feeRest }}" />
+  </van-cell-group>
+  <van-cell-group>
+    <van-collapse value="{{ activeName }}" bind:change="onChange" accordion>
+      <van-collapse-item wx:for="{{ feeDetail }}" wx:key="FeeDetailTime" title="{{ item.feeDetailItem }}" name="{{ index + 1 }}" value="{{ item.feeDetailValue }}">
+        <van-cell title="日期" value="{{ item.FeeDetailTime }}-{{ index }}" />
+        <van-cell title="流水" value="{{ item.feeDetailType }}{{ item.feeDetailValue }}" border="{{ false }}"/>
+      </van-collapse-item>
+    </van-collapse>
+  </van-cell-group>
+</van-row>
+<!--弹出账本选择框-->
+<van-popup show="{{ show }}" bind:close="onClose" position="top">
+  <van-picker columns="{{ TeamAccount }}" bind:change="onChange" />
+</van-popup>

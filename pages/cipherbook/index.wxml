@@ -1,0 +1,19 @@
+<!--index.wxml-->
+
+  <van-search value="{{ value }}" placeholder="还没做(┬＿┬)" />
+  <van-grid column-num="3">
+    <!--此处的图标可以在https://youzan.github.io/vant-weapp/#/icon#ti-shi-xin-xi这里获取到-->
+    <van-grid-item icon="service-o" text="我想要" />
+    <van-grid-item icon="calender-o" text="日期计算" />
+    <van-grid-item icon="cash-on-deliver" text="我的账本" />
+    <van-grid-item icon="envelop-o" text="密码本" />
+    <van-grid-item icon="notes-o" text="云记事本" />
+  </van-grid>
+<view class="container">
+  <view class="weui-footer">
+    <view class="weui-footer__links">
+        <navigator url="" class="weui-footer__link">那年</navigator>
+    </view>
+    <view class="weui-footer__text">Copyright © 2019-2020</view>
+  </view>
+</view>

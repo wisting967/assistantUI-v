@@ -1,26 +1,27 @@
 <!--index.wxml-->
-<view class="container">
-  <view class="userinfo">
-    <button wx:if="{{!hasUserInfo && canIUse}}" open-type="getUserInfo" bindgetuserinfo="getUserInfo"> 获取头像昵称 </button>
-    <block wx:else>
-      <image bindtap="bindViewTap" class="userinfo-avatar" src="{{userInfo.avatarUrl}}" mode="cover"></image>
-      <text class="userinfo-nickname">{{userInfo.nickName}}</text>
-    </block>
-  </view>
-  <view class="usermotto">
-    <text class="user-motto">{{motto}}</text>
-  </view>
-  <van-button type="primary">test in view</van-button>
-  <van-button type="default">默认按钮</van-button>
-  <van-button type="primary">主要按钮</van-button>
-  <van-button type="info">信息按钮</van-button>
-  <van-button type="warning">警告按钮</van-button>
-  <van-button type="danger">危险按钮</van-button>
-  <view class="weui-footer">
-    <view class="weui-footer__links">
-        <navigator url="" class="weui-footer__link">那年</navigator>
-    </view>
-    <view class="weui-footer__text">Copyright © 2019-2020</view>
-  </view>
-</view>
-<van-button type="primary">test</van-button>
+<van-row>
+  <text class="page__title">生活小助手</text>
+</van-row>
+<van-row>
+  <text class="page__desc">个人学习，服务大众，欢迎提问，尽力解决</text>
+</van-row>
+<van-row>
+  <van-search value="{{ value }}" placeholder="还没做(┬＿┬)" />
+</van-row>
+<van-row>
+  <van-grid column-num="3">
+    <!--此处的图标可以在https://youzan.github.io/vant-weapp/#/icon#ti-shi-xin-xi这里获取到-->
+    <van-grid-item icon="service-o" text="我的建议" />
+    <van-grid-item icon="calender-o" link-type="redirectTo" url="/pages/calender/calculate" text="日期计算" />
+    <van-grid-item icon="cash-on-deliver" link-type="redirectTo" url="/pages/accountbook/index" text="我的账本" />
+    <van-grid-item icon="envelop-o" text="密码本" />
+    <van-grid-item icon="notes-o" text="云笔记" />
+    <van-grid-item icon="notes-o" link-type="redirectTo" url="/pages/cipherbook/test" text="测试" />
+  </van-grid>
+</van-row>
+<van-row>
+  <text class="text__footer">那年</text>
+</van-row>
+<van-row>
+  <text class="text__copyright">Copyright @ 那年 2018-2020</text>
+</van-row>

@@ -1,14 +1,25 @@
 {
   "pages": [
     "pages/index/index",
-    "pages/logs/logs"
+    "pages/logs/logs",
+    "pages/myservice",
+    "pages/calender/calculate",
+    "pages/cipherbook/test",
+    "pages/accountbook/index"
   ],
   "window": {
     "backgroundTextStyle": "light",
     "navigationBarBackgroundColor": "#fff",
-    "navigationBarTitleText": "WeChat",
-    "navigationBarTextStyle": "black"
+    "navigationBarTextStyle": "black",
+    "navigationBarTitleText": "生活小助手"
   },
-  "style": "v2",
-  "sitemapLocation": "sitemap.json"
+  "sitemapLocation": "sitemap.json",
+  "usingComponents": {
+    "van-cell-group": "../../component/@vant/weapp/dist/cell-group/index",
+    "van-cell": "../../component/@vant/weapp/dist/cell/index",
+    "van-button": "../../component/@vant/weapp/dist/button/index",
+    "van-dialog": "../../component/@vant/weapp/dist/dialog/index",
+    "van-row": "../../component/@vant/weapp/dist/row/index",
+    "van-col": "../../component/@vant/weapp/dist/col/index"
+  }
 }
